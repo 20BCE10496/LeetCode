@@ -1,0 +1,23 @@
+class Solution {
+    public int pairSum(ListNode head) {
+        int n=0,j=0,result=0;
+        ListNode p=head;
+        ListNode a=head;
+        while(a.next!=null){
+            n++;
+            a=a.next;
+        }
+        int[] arr=new int[n+1];
+        while(p.next!=null){
+            arr[j]=p.val;
+            j++;
+            p=p.next;
+        }
+        arr[j]=p.val;// to take last node
+        for(int i=0;i<arr.length/2;i++){
+            int sum=arr[i]+arr[arr.length-1-i];
+            result=Math.max(result,sum);
+        }
+        return result;
+    }
+}
