@@ -90,7 +90,6 @@ class Sol
             if (head1.data == head2.data) {
                 current.next = new Node(head1.data);
                 current = current.next;
-
                 head1 = head1.next;
                 head2 = head2.next;
             } else if (head1.data < head2.data) {
@@ -102,5 +101,4 @@ class Sol
 
         return dummy.next; 
     }
-
 }
