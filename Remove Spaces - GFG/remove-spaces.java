@@ -25,18 +25,13 @@ class GFG
 
 
 //User function Template for Java
-class Solution {
-    String modify(String S) {
+class Solution
+{
+   
+    String modify(String S)
+    {
         // your code here
-        StringBuilder modified = new StringBuilder();
-        
-        for (int i = 0; i < S.length(); i++) {
-            char ch = S.charAt(i);
-            if (ch != ' ') {
-                modified.append(ch);
-            }
-        }
-        
-        return modified.toString();
+        return S.replaceAll(" ","");
+       
     }
 }
